@@ -29,8 +29,7 @@ spec:
           mail to: "${buildParameters.notification.email}",
             subject: "${env.BUILD_DISPLAY_NAME} successful",
             body: "Please go to ${env.BUILD_URL} and verify the build"
-          sh "cat build.yaml"
-          echo "Email sent to ${buildParameters.notification.email}"    
+          echo "Email sent to ${buildParameters.notification.email} defined in build.yaml"    
         }
       } // stage
     } // node
